@@ -15,6 +15,13 @@ $spacers: (
     )
   );
 }
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'custom': #d1d5db,
+  )
+);
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 
 a.hover-effect {
