@@ -1,0 +1,38 @@
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/variables';
+
+$spacer: 0.5rem;
+$spacers: (
+  0: 0,
+);
+@for $i from 1 through 150 {
+  $spacers: map-merge(
+    $spacers,
+    (
+      $i: (
+        $i * $spacer,
+      ),
+    )
+  );
+}
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+
+a.hover-effect {
+  transition: color 0.3s ease-in-out;
+  color: black;
+  &:hover {
+    color: #007bff;
+  }
+}
+
+.divider {
+  height: 1px;
+  background-color: #007bff;
+  width: 30%;
+  margin: auto;
+}
+
+.skill-icon {
+  width: 96px;
+  height: 96px;
+}
